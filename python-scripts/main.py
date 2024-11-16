@@ -51,15 +51,15 @@ if __name__ == "__main__":
             send_to_db(temperature, pressure, humidity, conn, table_name)
             if temperature >= 60:
                 print(color.red + "extreme temperature warning!" + color.reset)
-            if temperature <= 0:
+            elif temperature <= 0:
                 print(color.red + "low temperature warning!" + color.reset)
             if pressure >= 1060:
                 print(color.red + "extreme pressure warning!" + color.reset)
-            if pressure <= 960:
+            elif pressure <= 960:
                 print(color.red + "low pressure warning!" + color.reset)
             if humidity >= 90:
                 print(color.red + "extreme humidity warning!" + color.reset)
-            if humidity <= 10:
+            elif humidity <= 10:
                 print(color.red + "low humidity warning!" + color.reset)
             else:
                 print(color.green + "temperature, pressure and humidity values are normal" + color.reset)
