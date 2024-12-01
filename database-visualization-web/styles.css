@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-sizing: border-box;
+    background-color: #0D0D0D;
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+body, html {
+    height: 100%; /* Sayfa yüksekliği */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Sayfa yüksekliği en az viewport yüksekliği olacak */
+}
+
+main {
+    flex: 1; /* Main içerik alanı esnek olur ve boşluğu doldurur */
+    margin: 15px;
+}
+
+header {
+    margin: 15px;
+    padding: 15px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.title {
+    font-size: 25px;
+    color: #00FF41;
+}
+
+#title button {
+    all: unset;
+    text-decoration: none;
+    margin-right: 35px;
+    font-size: 25px;
+    color: #00FF41;
+}
+
+#title button:hover {
+    color: #BFBFBF;
+    transition: color .2s;
+    cursor: pointer;
+}
+
+#navbar button {
+    all: unset;
+    text-decoration: none;
+    margin-right: 35px;
+    font-size: 25px;
+    color: #00FF41;
+}
+
+#navbar button:hover {
+    color: #BFBFBF;
+    transition: color .2s;
+    cursor: pointer;
+}
+
+#descriptions {
+    display: flex;
+    text-align: center;
+    margin-top: 100px;
+}
+
+article h3 {
+    color: #006400;
+}
+
+article p {
+    color: #BFBFBF;
+}
+
+.block {
+    margin: 15px;
+}
+
+#contact {
+    display: flex;
+    justify-content: space-around;
+}
+
+.block a {
+    text-decoration: none;
+    color: #00FF41;
+}
+
+.block a:hover {
+    color: #BFBFBF;
+    transition: color .2s;
+}
+
+/* DATA-CHECK-PAGE */
+
+input {
+    padding: 5px;
+    width: 300px;
+    margin: 5px;
+    color: #BFBFBF;
+}
+
+label {
+    color: #BFBFBF;
+}
+
+.data-check-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+#check {
+    color: #BFBFBF;
+    margin-top: 5px;
+    padding: 5px;
+    width: 378px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    #descriptions {
+        flex-direction: column;
+        margin-top: 50px; /* Yukarıda daha fazla alan bırakarak yerleşim değişiyor */
+    }
+    
+    .block {
+        flex-basis: 100%; /* Küçük ekranlarda her bir block tam genişlikte olacak */
+        margin-bottom: 20px;
+    }
+
+    #navbar a {
+        font-size: 18px; /* Küçük ekranlar için navbar fontu küçültülüyor */
+    }
+
+    .title {
+        font-size: 20px; /* Küçük ekranlar için başlık fontu küçültülüyor */
+    }
+}
+
+
+
+
