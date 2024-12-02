@@ -21,6 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Sayfa yüksekliği en az viewport yüksekliği olacak */
+    justify-content: center;
 }
 
 main {
@@ -103,28 +104,36 @@ article p {
 
 /* DATA-CHECK-PAGE */
 
-input {
-    padding: 5px;
-    width: 300px;
+#data-check-page {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto; /* Yatay ortalama */
+    align-items: center; /* Yatay ortalama */
+    margin-top: 40px;
+}
+
+input, select, button {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
     margin: 5px;
     color: #BFBFBF;
+    border-radius: 1px;
 }
 
-label {
-    color: #BFBFBF;
+#select {
+    text-align: center;
 }
 
-.data-check-page form {
-    display: flex;
-    flex-direction: column;
+#date-and-time {
+    display: none;
 }
 
-#check {
-    color: #BFBFBF;
-    margin-top: 5px;
-    padding: 5px;
-    width: 378px;
+#only-day {
+    display: none;
 }
+
 
 /* RESPONSIVE */
 
@@ -147,7 +156,3 @@ label {
         font-size: 20px; /* Küçük ekranlar için başlık fontu küçültülüyor */
     }
 }
-
-
-
-
