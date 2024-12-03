@@ -26,12 +26,13 @@ body {
 
 main {
     flex: 1; /* Main içerik alanı esnek olur ve boşluğu doldurur */
-    margin: 15px;
+    justify-content: center;
 }
 
 header {
     margin: 15px;
     padding: 15px;
+    height: 100px;
     justify-content: space-between;
     display: flex;
 }
@@ -46,12 +47,15 @@ header {
     text-decoration: none;
     margin-right: 35px;
     font-size: 25px;
+    transition: font-size 0.3s ease;
     color: #00FF41;
 }
 
 #title button:hover {
     color: #BFBFBF;
     transition: color .2s;
+    font-size: 26px;
+    transition: font-size 0.3s ease;
     cursor: pointer;
 }
 
@@ -60,12 +64,15 @@ header {
     text-decoration: none;
     margin-right: 35px;
     font-size: 25px;
+    transition: font-size 0.3s ease;
     color: #00FF41;
 }
 
 #navbar button:hover {
     color: #BFBFBF;
     transition: color .2s;
+    font-size: 26px;
+    transition: font-size 0.3s ease;
     cursor: pointer;
 }
 
@@ -95,11 +102,15 @@ article p {
 .block a {
     text-decoration: none;
     color: #00FF41;
+    font-size: 18px;
+    transition: font-size 0.3s ease;
 }
 
 .block a:hover {
     color: #BFBFBF;
     transition: color .2s;
+    font-size: 20px;
+    transition: font-size 0.3s ease;
 }
 
 /* DATA-CHECK-PAGE */
