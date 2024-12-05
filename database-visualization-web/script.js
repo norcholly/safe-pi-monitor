@@ -11,12 +11,12 @@ function dataCheck() {
                 </div>
             </div>
             <div id="date-and-time" style="display:none;">
-                <form action="">
+                <form action="check/datetime-check.php" method="POST">
                     <div>
-                        <input id="date" type="date" placeholder="Date" required>
+                        <input id="date" type="date" name="date" placeholder="Date" required>
                     </div>
                     <div>
-                        <input id="time" type="time" placeholder="Time" required>
+                        <input id="time" type="time" name="time" placeholder="Time" required>
                     </div>
                     <div>
                         <button id="check" type="submit">check</button>
@@ -24,9 +24,9 @@ function dataCheck() {
                 </form>
             </div>
             <div id="only-day" style="display:none;">
-                <form action="">
+                <form action="check/date-check.php" method="post">
                     <div>
-                        <input id="date2" type="date" placeholder="Date" required>
+                        <input id="date2" type="date" name="date2" placeholder="Date" required>
                     </div>
                     <div>
                         <button id="check" type="submit">check</button>
