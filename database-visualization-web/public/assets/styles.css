@@ -14,36 +14,28 @@
 }
 
 body, html {
-    height: 100%; /* Sayfa yüksekliği */
+    height: 100%;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Sayfa yüksekliği en az viewport yüksekliği olacak */
-    justify-content: center;
+    min-height: 100vh; 
 }
 
 main {
-    flex: 1; /* Main içerik alanı esnek olur ve boşluğu doldurur */
-    justify-content: center;
+    flex: 1; /* necessary */
 }
 
 header {
     margin: 15px;
     padding: 15px;
-    height: 100px;
+    height: 75px;
     justify-content: space-between;
     display: flex;
 }
 
-.title {
-    font-size: 25px;
-    color: #00FF41;
-}
-
-#title button {
-    all: unset;
+#title {
     text-decoration: none;
     margin-right: 35px;
     font-size: 25px;
@@ -51,16 +43,14 @@ header {
     color: #00FF41;
 }
 
-#title button:hover {
+#title:hover {
     color: #BFBFBF;
     transition: color .2s;
     font-size: 26px;
     transition: font-size 0.3s ease;
-    cursor: pointer;
 }
 
-#navbar button {
-    all: unset;
+#navbar a {
     text-decoration: none;
     margin-right: 35px;
     font-size: 25px;
@@ -68,12 +58,11 @@ header {
     color: #00FF41;
 }
 
-#navbar button:hover {
+#navbar a:hover {
     color: #BFBFBF;
     transition: color .2s;
     font-size: 26px;
     transition: font-size 0.3s ease;
-    cursor: pointer;
 }
 
 #descriptions {
@@ -88,6 +77,11 @@ article h3 {
 
 article p {
     color: #BFBFBF;
+}
+
+footer {
+    height: 75px;
+    margin-top: 20px;
 }
 
 .block {
@@ -119,12 +113,12 @@ article p {
     width: 100%;
     max-width: 600px;
     text-align: center;
-    margin: 0 auto; /* Yatay ortalama */
-    align-items: center; /* Yatay ortalama */
+    margin: 0 auto;
+    align-items: center;
     margin-top: 40px;
 }
 
-input, select, button {
+#content input, #content select, #content button {
     width: 100%;
     max-width: 400px;
     padding: 10px;
@@ -145,25 +139,53 @@ input, select, button {
     display: none;
 }
 
+/* RESULTS */
+
+#data-result {
+    margin: 0 auto;
+    width: 800px;
+}
+
+table {
+    color: #BFBFBF;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+td, th {
+    padding: 10px;
+}
+
+#turn-to-back {
+    margin: 20px auto;
+    color: #BFBFBF;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
 
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
     #descriptions {
         flex-direction: column;
-        margin-top: 50px; /* Yukarıda daha fazla alan bırakarak yerleşim değişiyor */
+        margin-top: 50px;
     }
     
     .block {
-        flex-basis: 100%; /* Küçük ekranlarda her bir block tam genişlikte olacak */
+        flex-basis: 100%;
         margin-bottom: 20px;
     }
 
     #navbar a {
-        font-size: 18px; /* Küçük ekranlar için navbar fontu küçültülüyor */
+        font-size: 18px;
     }
 
     .title {
-        font-size: 20px; /* Küçük ekranlar için başlık fontu küçültülüyor */
+        font-size: 20px;
     }
 }
