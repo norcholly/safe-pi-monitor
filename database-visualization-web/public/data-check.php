@@ -27,6 +27,9 @@
                             <input id="database-name" type="text" name="database-name" placeholder="database-name"required>
                         </div>
                         <div>
+                            <input id="table-name" type="text" name="table-name" placeholder="table-name" required>
+                        </div>
+                        <div>
                             <input id="date" type="date" name="date" placeholder="date" required>
                         </div>
                         <div>
@@ -50,6 +53,9 @@
                         </div>
                         <div>
                             <input id="database-name" type="text" name="database-name" placeholder="database-name"required>
+                        </div>
+                        <div>
+                            <input id="table-name" type="text" name="table-name" placeholder="table-name" required>
                         </div>
                         <div>
                             <input id="date2" type="date" name="date2" placeholder="Date" required>

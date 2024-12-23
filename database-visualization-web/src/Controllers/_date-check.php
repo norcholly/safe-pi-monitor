@@ -15,6 +15,7 @@
     $user = $_POST["username"];
     $password = $_POST["password"];
     $database = $_POST["database-name"];
+    $table = $_POST["table-name"];
 
     // connect
     $conn = new mysqli($host, $user, $password, $database);
@@ -27,7 +28,7 @@
     // query
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $date2 = $_POST['date2']; 
-        $sql = "SELECT * FROM data WHERE time LIKE '%$date2%'";
+        $sql = "SELECT * FROM $table WHERE time LIKE '%$date2%'";
         $result = $conn->query($sql);
     }
 
