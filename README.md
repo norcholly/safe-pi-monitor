@@ -1,5 +1,5 @@
-# raspberry-weather-visualizer
-A project that collects current weather data from a sensor, stores it in a database, and allows us to view the data through a web application.
+# safe-pi-monitor
+A project that collects current weather data from a sensor, stores it in a database, and allows us to view the data through a web application with IDS/IPS system.
 
 # database-setup-demo
 
