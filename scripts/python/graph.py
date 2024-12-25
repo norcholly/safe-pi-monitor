@@ -26,31 +26,35 @@ def get_data(temperature, pressure, humidity, time, table_name):
     return results
 
 
+
 def plotting(y1, y2, y3, x):
     plt.figure(figsize=(16, 10))
     plt.rcParams['axes.facecolor'] = '#0D0D0D'
-    plt.rcParams['axes.edgecolor'] = '#BFBFBF'
+    plt.rcParams['axes.edgecolor'] = '#6E6E6E'  
 
     # graph 1
     plt.subplot(3, 1, 1)
     plt.plot(x, y1, label="Temperature", color="red", linestyle="--", marker="o")
-    plt.title("Temperature", color="white")
-    plt.grid(True, color='#BFBFBF')
-    plt.xticks(range(24), [f"{i:02}" for i in range(24)])
+    plt.title("Temperature", color="#6E6E6E")  
+    plt.grid(True, color="#6E6E6E")
+    plt.xticks(range(24), [f"{i:02}" for i in range(24)], color="#6E6E6E")
+    plt.yticks(color="red")
 
     # graph 2
     plt.subplot(3, 1, 2)
     plt.plot(x, y2, label="Pressure", color="cyan", linestyle="-", marker="s")
-    plt.title("Pressure", color="white")
-    plt.grid(True, color='#BFBFBF')
-    plt.xticks(range(24), [f"{i:02}" for i in range(24)])
+    plt.title("Pressure", color="#6E6E6E")
+    plt.grid(True, color="#6E6E6E")
+    plt.xticks(range(24), [f"{i:02}" for i in range(24)], color="#6E6E6E") 
+    plt.yticks(color="cyan")
 
     # graph 3
     plt.subplot(3, 1, 3)
     plt.plot(x, y3, label="Humidity", color="purple", linestyle=":", marker=".")
-    plt.title("Humidity", color="white")
-    plt.grid(True, color='#BFBFBF')
-    plt.xticks(range(24), [f"{i:02}" for i in range(24)])
+    plt.title("Humidity", color="#6E6E6E")
+    plt.grid(True, color="#6E6E6E")
+    plt.xticks(range(24), [f"{i:02}" for i in range(24)], color="#6E6E6E")
+    plt.yticks(color="purple")
 
     # save
     if os.path.exists("/var/www/html/graph.png"):
