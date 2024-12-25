@@ -15,7 +15,7 @@ from conn import conn_to_db
 def get_data(temperature, pressure, humidity, time, table_name):
     cursor = conn.cursor()
     query = f"""
-        SELECT {temperature}, {pressure}, {humidity}, TIME_FORMAT({time}, '%h:%i %p')
+        SELECT {temperature}, {pressure}, {humidity}, HOUR({time})
         FROM {table_name}
         WHERE DATE({time}) = '2024-12-24'
         AND MINUTE({time}) = 0
@@ -48,7 +48,7 @@ def plotting(y1, y2, y3, x):
     # graph 3
     plt.subplot(3, 1, 3)
     plt.plot(x, y3, label="Humidity", color="purple", linestyle=":", marker=".")
-    plt.grid(True)
+    plt.title("Humidity", color="white")
     plt.grid(True, color='#BFBFBF')
     plt.xticks(range(24), [f"{i:02}" for i in range(24)])
 
