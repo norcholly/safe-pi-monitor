@@ -17,7 +17,7 @@ def get_data(temperature, pressure, humidity, time, table_name):
     query = f"""
         SELECT {temperature}, {pressure}, {humidity}, TIME_FORMAT({time}, '%h:%i %p')
         FROM {table_name}
-        WHERE {time} >= NOW() - INTERVAL 1 DAY
+        WHERE DATE({time}) = '2024-12-24'
         AND MINUTE({time}) = 0
         ORDER BY {time} ASC
     """
@@ -28,30 +28,35 @@ def get_data(temperature, pressure, humidity, time, table_name):
 
 def plotting(y1, y2, y3, x):
     plt.figure(figsize=(16, 10))
+    plt.rcParams['axes.facecolor'] = '#0D0D0D'
+    plt.rcParams['axes.edgecolor'] = '#BFBFBF'
 
     # graph 1
     plt.subplot(3, 1, 1)
     plt.plot(x, y1, label="Temperature", color="red", linestyle="--", marker="o")
     plt.title("Temperature")
     plt.grid(True)
+    plt.xticks(range(24), [f"{i:02}" for i in range(24)])
 
     # graph 2
     plt.subplot(3, 1, 2)
     plt.plot(x, y2, label="Pressure", color="cyan", linestyle="-", marker="s")
     plt.title("Pressure")
     plt.grid(True)
+    plt.xticks(range(24), [f"{i:02}" for i in range(24)])
 
     # graph 3
     plt.subplot(3, 1, 3)
     plt.plot(x, y3, label="Humidity", color="purple", linestyle=":", marker=".")
     plt.title("Humidity")
     plt.grid(True)
+    plt.xticks(range(24), [f"{i:02}" for i in range(24)])
 
     # save
     if os.path.exists("/var/www/html/graph.png"):
         os.remove("/var/www/html/graph.png")
 
-    plt.savefig("/var/www/html/graph.png")
+    plt.savefig("/var/www/html/graph.png", facecolor='#0D0D0D')
     plt.tight_layout()
 
 
@@ -71,7 +76,7 @@ if __name__ == "__main__":
             y1 = [row[0] for row in results]
             y2 = [row[1] for row in results]
             y3 = [row[2] for row in results]
-            x = [row[3] for row in results]
+            x = [int(row[3]) for row in results]
             plotting(y1, y2, y3, x)
             print(color.green + "graphic saved." + color.reset)
         else:
