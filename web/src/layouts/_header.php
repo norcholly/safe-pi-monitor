@@ -9,12 +9,12 @@
 <body>
 <header>
     <div>
-        <a id="title" href="../../public/index.php" class="title">raspberry-weather-visualizer</a>
+        <a id="title" href="index.php" class="title">raspberry-weather-visualizer</a>
     </div>
     <div>
         <nav id="navbar">
-            <a href="../../public/data-check.php">data-check</a>
-            <a href="#">graph</a>
+            <a href="data-check.php">data-check</a>
+            <a href="graph.php">graph</a>
         </nav>
     </div>
 </header>

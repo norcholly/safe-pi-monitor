@@ -167,6 +167,13 @@ td, th {
     width: 100%;
 }
 
+/* GRAPH */
+
+#graph img {
+    width: 190vh;
+    height: auto;
+}
+
 
 /* RESPONSIVE */
 
@@ -187,5 +194,10 @@ td, th {
 
     .title {
         font-size: 20px;
+    }
+
+    #graph img {
+        width: 40vh;
+        height: auto;
     }
 }
