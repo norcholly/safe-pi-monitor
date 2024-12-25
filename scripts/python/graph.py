@@ -60,6 +60,7 @@ def plotting(y1, y2, y3, x):
     if os.path.exists("/var/www/html/graph.png"):
         os.remove("/var/www/html/graph.png")
 
+    plt.subplots_adjust(hspace=0.4)
     plt.savefig("/var/www/html/graph.png", facecolor='#0D0D0D')
     plt.tight_layout()
 
