@@ -17,7 +17,7 @@ def get_data(temperature, pressure, humidity, time, table_name):
     query = f"""
         SELECT {temperature}, {pressure}, {humidity}, HOUR({time})
         FROM {table_name}
-        WHERE DATE({time}) = '2024-12-24'
+        WHERE {time} >= NOW() - INTERVAL 1 DAY
         AND MINUTE({time}) = 0
         ORDER BY {time} ASC
     """
