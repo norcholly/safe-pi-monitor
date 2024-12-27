@@ -12,14 +12,14 @@ from colors import Colors
 from conn import conn_to_db
 
 
-def get_data(temperature, pressure, humidity, time, table_name):
+def get_data(temperature, pressure, humidity, timestamp, table_name):
     cursor = conn.cursor()
     query = f"""
-        SELECT {temperature}, {pressure}, {humidity}, HOUR({time})
+        SELECT {temperature}, {pressure}, {humidity}, HOUR({timestamp})
         FROM {table_name}
-        WHERE {time} >= NOW() - INTERVAL 1 DAY
-        AND MINUTE({time}) = 0
-        ORDER BY {time} ASC
+        WHERE {timestamp} >= NOW() - INTERVAL 1 DAY
+        AND MINUTE({timestamp}) = 0
+        ORDER BY {timestamp} ASC
     """
     cursor.execute(query)
     results = cursor.fetchall()
@@ -77,7 +77,7 @@ if __name__ == "__main__":
     try:
         conn = conn_to_db(hostname, username, password, dbname)
         if conn is not None:
-            results = get_data('temperature', 'pressure', 'humidity', 'time', table_name)
+            results = get_data('temperature', 'pressure', 'humidity', 'timestamp', table_name)
             y1 = [row[0] for row in results]
             y2 = [row[1] for row in results]
             y3 = [row[2] for row in results]

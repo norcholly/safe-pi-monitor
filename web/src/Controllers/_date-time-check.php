@@ -30,7 +30,7 @@
         $date = $_POST["date"];
         $time = $_POST["time"];
         $datetime = $date. ' ' .$time;
-        $sql = "SELECT * FROM $table WHERE time LIKE '$datetime%'";
+        $sql = "SELECT * FROM $table WHERE timestamp LIKE '$datetime%'";
         $result = $conn->query($sql);
     }
 

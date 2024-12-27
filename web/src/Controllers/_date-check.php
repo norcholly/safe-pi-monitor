@@ -28,7 +28,7 @@
     // query
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $date2 = $_POST['date2']; 
-        $sql = "SELECT * FROM $table WHERE time LIKE '%$date2%'";
+        $sql = "SELECT * FROM $table WHERE timestamp LIKE '%$date2%'";
         $result = $conn->query($sql);
     }
 

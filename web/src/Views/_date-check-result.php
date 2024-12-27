@@ -7,14 +7,14 @@
 <?php if ($result->num_rows > 0) : ?>
         <table border="1">
             <tr>
-                <th>Time</th>
+                <th>Timestamp</th>
                 <th>Temperature</th>
                 <th>Pressure</th>
                 <th>Humidity</th>
             </tr>
             <?php while ($row = $result->fetch_assoc()) : ?>
                 <tr>
-                    <td><?= $row["time"]?></td>
+                    <td><?= $row["timestamp"]?></td>
                     <td><?= $row["temperature"]?>C</td>
                     <td><?= $row["pressure"]?>mBar</td>
                     <td>%<?= $row["humidity"]?></td>
