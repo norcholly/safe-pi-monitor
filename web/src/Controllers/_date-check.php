@@ -11,11 +11,12 @@
     // }
 
     // database connection
-    $host = $_POST["host"];
-    $user = $_POST["username"];
-    $password = $_POST["password"];
-    $database = $_POST["database-name"];
-    $table = $_POST["table-name"];
+    $host = htmlspecialchars($_POST["host"], ENT_QUOTES, 'UTF-8');
+    $user = htmlspecialchars($_POST["username"], ENT_QUOTES, 'UTF-8');
+    $password = htmlspecialchars($_POST["password"], ENT_QUOTES, 'UTF-8');
+    $database = htmlspecialchars($_POST["database-name"], ENT_QUOTES, 'UTF-8');
+    $table = htmlspecialchars($_POST["table-name"], ENT_QUOTES, 'UTF-8');
+    $date2 = htmlspecialchars($_POST['date2'], ENT_QUOTES, 'UTF-8');
 
     // connect
     $conn = new mysqli($host, $user, $password, $database);
@@ -27,9 +28,12 @@
 
     // query
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $date2 = $_POST['date2']; 
-        $sql = "SELECT * FROM $table WHERE timestamp LIKE '%$date2%'";
-        $result = $conn->query($sql);
+        $date2 = htmlspecialchars($_POST['date2'], ENT_QUOTES, 'UTF-8');
+        $stmt = $conn->prepare("SELECT * FROM `$table` WHERE `timestamp` LIKE ?");
+        $search = "%$date2%";
+        $stmt->bind_param("s", $search);
+        $stmt->execute();
+        $result = $stmt->get_result();
     }
 
     $conn->close();

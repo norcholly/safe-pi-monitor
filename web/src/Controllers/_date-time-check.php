@@ -11,11 +11,11 @@
     // }
 
     // database connection
-    $host = $_POST["host"];
-    $user = $_POST["username"];
-    $password = $_POST["password"];
-    $database = $_POST["database-name"];
-    $table = $_POST["table-name"];
+    $host = htmlspecialchars($_POST["host"], ENT_QUOTES, 'UTF-8');
+    $user = htmlspecialchars($_POST["username"], ENT_QUOTES, 'UTF-8');
+    $password = htmlspecialchars($_POST["password"], ENT_QUOTES, 'UTF-8');
+    $database = htmlspecialchars($_POST["database-name"], ENT_QUOTES, 'UTF-8');
+    $table = htmlspecialchars($_POST["table-name"], ENT_QUOTES, 'UTF-8');
 
     // connect
     $conn = new mysqli($host, $user, $password, $database);
@@ -27,11 +27,16 @@
 
     // query
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $date = $_POST["date"];
-        $time = $_POST["time"];
-        $datetime = $date. ' ' .$time;
-        $sql = "SELECT * FROM $table WHERE timestamp LIKE '$datetime%'";
-        $result = $conn->query($sql);
+        $date = htmlspecialchars($_POST["date"], ENT_QUOTES, 'UTF-8');
+        $time = htmlspecialchars($_POST["time"], ENT_QUOTES, 'UTF-8');
+        $datetime = $date . ' ' . $time;
+
+        // prepared statement kullanımı
+        $stmt = $conn->prepare("SELECT * FROM `$table` WHERE `timestamp` LIKE ?");
+        $search = "$datetime%";
+        $stmt->bind_param("s", $search);
+        $stmt->execute();
+        $result = $stmt->get_result();
     }
 
     $conn->close();
