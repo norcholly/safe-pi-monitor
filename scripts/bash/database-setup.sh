@@ -1,4 +1,8 @@
 #!/bin/bash
+# -------------------------------
+# chmod +x database-setup.sh
+# sudo ./database-setup.sh
+# -------------------------------
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'

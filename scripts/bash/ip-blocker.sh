@@ -1,4 +1,10 @@
 #!/bin/bash
+# -------------------------------
+# chmod +x ip-blocker.sh
+# sudo nano /etc/crontab
+# @reboot  root /usr/bin/bash   /root/safe-pi-monitor/scripts/bash/ip-blocker.sh
+# sudo ./ip-blocker.sh
+# -------------------------------
 
 LOG_FILE="/var/log/suricata/fast.log"
 HOME_IP="X.X.X.X" # change this

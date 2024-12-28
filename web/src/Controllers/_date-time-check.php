@@ -31,7 +31,7 @@
         $time = htmlspecialchars($_POST["time"], ENT_QUOTES, 'UTF-8');
         $datetime = $date . ' ' . $time;
 
-        // prepared statement kullanımı
+        // prepared statement
         $stmt = $conn->prepare("SELECT * FROM `$table` WHERE `timestamp` LIKE ?");
         $search = "$datetime%";
         $stmt->bind_param("s", $search);
