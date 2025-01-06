@@ -1,6 +1,11 @@
 # safe-pi-monitor
 A project that collects current weather data from a sensor, stores it in a database, and allows us to view the data through a web application with IDS/IPS system.
 
+# how-can-i-set-it-up?
+
+[TR] https://alirfandogan.com/2024/12/27/safe-pi-monitor-tr/ <br>
+[TR] https://alirfandogan.com/2024/12/28/iot-guvenligi-cihaziniza-ids-ips-kurulumu/
+
 # database-setup-demo
 
 https://github.com/user-attachments/assets/d7f94207-26e9-405b-b064-b9f8d3055c3b
