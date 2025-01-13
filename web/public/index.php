@@ -1,5 +1,6 @@
 <?php require "../src/layouts/_header.php"; ?>
 
+<!-- main page -->
 <main>
     <div id="content">
         <div id="main-page" class="page">

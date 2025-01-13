@@ -7,6 +7,7 @@
     <title>raspberry-weather-visualizer</title>
 </head>
 <body>
+<!-- header from layouts folder -->
 <header>
     <div>
         <a id="title" href="index.php" class="title">raspberry-weather-visualizer</a>

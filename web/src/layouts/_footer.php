@@ -1,3 +1,4 @@
+<!-- footer from the layouts folder -->
 <footer>
     <article id="contact">
         <section class="block">

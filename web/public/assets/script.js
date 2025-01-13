@@ -4,11 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const onlyDayDiv = document.getElementById("only-day");
 
     if (selectElement) {
-        // Dinleyici ekle
         selectElement.addEventListener("change", function () {
             const selectedValue = this.value;
 
-            // Seçime göre bölümleri göster veya gizle
             if (selectedValue === "1") {
                 dateAndTimeDiv.style.display = "block";
                 onlyDayDiv.style.display = "none";

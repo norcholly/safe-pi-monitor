@@ -5,6 +5,10 @@
 # @reboot  root /usr/bin/bash   /root/safe-pi-monitor/scripts/bash/ip-blocker.sh
 # sudo ./ip-blocker.sh
 # -------------------------------
+# First Released: 2025-01-13
+# Version: 1.0
+# Author: Ali İrfan Doğan
+# -------------------------------
 
 LOG_FILE="/var/log/suricata/fast.log"
 HOME_IP="X.X.X.X" # change this

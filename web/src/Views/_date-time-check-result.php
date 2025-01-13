@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="../../public/assets/styles.css">
 
-<!-- output -->
+<!-- outputs -->
 <main>
     <div id="data-result">
         <button onclick="window.location.href='../../public/data-check.php';" id="turn-to-back">turn-to-back</button>

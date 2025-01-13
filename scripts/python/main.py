@@ -6,9 +6,12 @@
 # You need to change the variables: Hostname, Username, Password, Database Name, and Table Name!
 #
 # raspberry-weather-visualizer v1.0
-# created by @norcholly
 # https://alirfandogan.com/
-# v1.0
+# -------------------------------
+# First Released: 2025-01-13
+# Version: 1.0
+# Author: Ali İrfan Doğan
+# -------------------------------
 
 from sense_emu import SenseHat
 import mysql.connector as mysql

@@ -4,6 +4,11 @@
 # The MySQL server must be active and properly configured for it to work.
 # It is recommended to use it by adding it to cron jobs.
 # You need to change the variables: Hostname, Username, Password, Database Name, and Table Name!
+# -------------------------------
+# First Released: 2025-01-13
+# Version: 1.0
+# Author: Ali İrfan Doğan
+# -------------------------------
 
 import matplotlib.pyplot as plt
 import mysql.connector as mysql

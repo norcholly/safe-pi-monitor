@@ -2,14 +2,6 @@
 
 <?php
 
-    // error handling
-
-    // if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    //     echo "<pre>";
-    //     print_r($_POST);
-    //     echo "</pre>";
-    // }
-
     // database connection
     $host = htmlspecialchars($_POST["host"], ENT_QUOTES, 'UTF-8');
     $user = htmlspecialchars($_POST["username"], ENT_QUOTES, 'UTF-8');

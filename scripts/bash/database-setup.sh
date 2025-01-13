@@ -3,6 +3,11 @@
 # chmod +x database-setup.sh
 # sudo ./database-setup.sh
 # -------------------------------
+# First Released: 2025-01-13
+# Version: 1.0
+# Author: Ali İrfan Doğan
+# -------------------------------
+
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'

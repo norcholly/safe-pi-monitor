@@ -1,5 +1,6 @@
 <?php require "../src/layouts/_header.php"; ?>
 
+<!-- data-check-page -->
 <main>
     <div id="content">
         <div id="data-check-page">

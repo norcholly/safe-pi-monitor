@@ -1,5 +1,6 @@
 <?php require "../src/layouts/_header.php"; ?>
 
+<!-- graph check page -->
 <main>
     <div id="graph">
         <img src="../graph.png">
