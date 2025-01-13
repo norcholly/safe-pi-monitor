@@ -3,7 +3,7 @@ A project that collects current weather data from a sensor, stores it in a datab
 
 # how-can-i-set-it-up?
 
-[EN] https://alirfandogan.com/2025/01/13/installation-of-virtual-smart-device-with-ids-ips-system
+[EN] https://alirfandogan.com/2025/01/13/installation-of-virtual-smart-device-with-ids-ips-system <br>
 [TR] https://alirfandogan.com/2024/12/27/safe-pi-monitor-tr/ <br>
 [TR] https://alirfandogan.com/2024/12/28/iot-guvenligi-cihaziniza-ids-ips-kurulumu/
 
