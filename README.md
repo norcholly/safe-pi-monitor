@@ -1,5 +1,5 @@
 # safe-pi-monitor
-A project that collects current weather data from a sensor, stores it in a database, and allows us to view the data through a web application with IDS/IPS system.
+A project that collects current weather data from a sensor, stores it in a database, is protected by IDS/IPS, and allows us to view the data through a web application.
 
 # how-can-i-set-it-up?
 
