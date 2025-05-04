@@ -1,5 +1,5 @@
 # safe-pi-monitor
-A project that collects current weather data from a sensor, stores it in a database, is protected by IDS/IPS, and allows us to view the data through a web application.
+A project that collects current weather data from a sensor, stores it in a database, is protected by host-based IDS/IPS, and allows us to view the data through a web application.
 
 # how-can-i-set-it-up?
 
@@ -19,7 +19,7 @@ https://github.com/user-attachments/assets/556e8733-5837-43ff-bc3b-c144e3bc42f6
 
 https://github.com/user-attachments/assets/0d8a9309-9c8d-4025-9205-d22d4d2bde82
 
-# ids-ips-system-demo
+# host-based-ids-ips-system-demo
 
 https://github.com/user-attachments/assets/2292e238-692e-4544-92d1-d6610ca1e72c
 
